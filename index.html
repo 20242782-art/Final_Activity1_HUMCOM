@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduGrant | Working Wireframe</title>
+  <link rel="stylesheet" href="css/wireframe.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" data-page="home">[ LOGO ] EduGrant</a>
+    <nav aria-label="Main navigation">
+      <button class="nav-link active" data-page="home">Home</button>
+      <button class="nav-link" data-page="search">Scholarships</button>
+      <button class="nav-link" data-page="dashboard">Dashboard</button>
+      <button class="nav-link" data-page="guide">Guide</button>
+      <button class="nav-link" data-page="about">About</button>
+    </nav>
+    <button class="outline-btn" data-page="dashboard">[ Login ]</button>
+  </header>
+
+  <main>
+    <section class="page active" id="home">
+      <div class="wire-box hero">
+        <div>
+          <p class="placeholder-label">[ HERO SECTION ]</p>
+          <h1>Your Future,<br> Your Opportunity.</h1>
+          <p>[ Short introduction about finding scholarships ]</p>
+          <div class="search-row">
+            <input id="homeSearch" type="search" placeholder="[ Search scholarships ]">
+            <button class="solid-btn" id="homeSearchBtn">Search</button>
+          </div>
+        </div>
+        <div class="image-placeholder">[ STUDENT<br>IMAGE ]</div>
+      </div>
+      <div class="section-title"><h2>Featured Scholarships</h2><button class="text-btn" data-page="search">[ View all ]</button></div>
+      <div class="grid three">
+        <article class="wire-box"><div class="image-placeholder small">[ ICON ]</div><h3>[ Academic Scholarship ]</h3><p>[ Short description ]</p><button class="outline-btn" data-page="search">[ Explore ]</button></article>
+        <article class="wire-box"><div class="image-placeholder small">[ ICON ]</div><h3>[ Government Grants ]</h3><p>[ Short description ]</p><button class="outline-btn" data-page="search">[ Explore ]</button></article>
+        <article class="wire-box"><div class="image-placeholder small">[ ICON ]</div><h3>[ Community Scholarships ]</h3><p>[ Short description ]</p><button class="outline-btn" data-page="search">[ Explore ]</button></article>
+      </div>
+    </section>
+
+    <section class="page" id="search">
+      <p class="placeholder-label">[ PAGE 2 ]</p><h1>Find Scholarships</h1>
+      <p>[ Search for scholarship opportunities ]</p>
+      <div class="wire-box filters">
+        <input id="searchInput" type="search" placeholder="[ Search by scholarship name ]">
+        <select id="levelFilter"><option value="">[ All education levels ]</option><option>Senior High School</option><option>College</option></select>
+        <select id="typeFilter"><option value="">[ All categories ]</option><option>Government</option><option>Academic</option><option>Private</option></select>
+        <button class="solid-btn" id="filterBtn">[ Search ]</button>
+      </div>
+      <p id="resultCount" class="muted">Showing all sample scholarships</p>
+      <div class="grid two" id="scholarshipList">
+        <article class="wire-box scholarship" data-name="CHED Scholarship" data-level="College" data-type="Government"><div class="image-placeholder small">[ LOGO ]</div><h3>CHED Scholarship</h3><p>[ Brief scholarship description ]</p><p>[ Deadline information ]</p><button class="solid-btn details-btn" data-name="CHED Scholarship">[ View details ]</button></article>
+        <article class="wire-box scholarship" data-name="DOST-SEI Scholarship" data-level="College" data-type="Government"><div class="image-placeholder small">[ LOGO ]</div><h3>DOST-SEI Scholarship</h3><p>[ Brief scholarship description ]</p><p>[ Deadline information ]</p><button class="solid-btn details-btn" data-name="DOST-SEI Scholarship">[ View details ]</button></article>
+        <article class="wire-box scholarship" data-name="Academic Scholarship" data-level="Senior High School" data-type="Academic"><div class="image-placeholder small">[ LOGO ]</div><h3>Academic Scholarship</h3><p>[ Brief scholarship description ]</p><p>[ Deadline information ]</p><button class="solid-btn details-btn" data-name="Academic Scholarship">[ View details ]</button></article>
+        <article class="wire-box scholarship" data-name="Private Foundation Grant" data-level="College" data-type="Private"><div class="image-placeholder small">[ LOGO ]</div><h3>Private Foundation Grant</h3><p>[ Brief scholarship description ]</p><p>[ Deadline information ]</p><button class="solid-btn details-btn" data-name="Private Foundation Grant">[ View details ]</button></article>
+      </div>
+      <p id="noResults" class="wire-box hidden">[ No matching scholarships found ]</p>
+    </section>
+
+    <section class="page" id="details">
+      <p class="placeholder-label">[ PAGE 3 ]</p><button class="text-btn" data-page="search">← [ Back to results ]</button>
+      <div class="wire-box detail-layout">
+        <div class="image-placeholder">[ SCHOLARSHIP<br>LOGO ]</div>
+        <div><h1 id="detailTitle">[ Scholarship Name ]</h1><p>[ Provider / Organization ]</p><p>[ Short overview of the scholarship ]</p><p><strong>Deadline:</strong> [ Check official announcement ]</p><button class="solid-btn" id="saveScholarship">[ Save scholarship ]</button><span id="saveMessage" class="muted" aria-live="polite"></span></div>
+      </div>
+      <div class="grid two">
+        <div class="wire-box"><h2>[ Eligibility Requirements ]</h2><ul><li>[ Requirement 1 ]</li><li>[ Requirement 2 ]</li><li>[ Requirement 3 ]</li></ul></div>
+        <div class="wire-box"><h2>[ Scholarship Benefits ]</h2><ul><li>[ Benefit 1 ]</li><li>[ Benefit 2 ]</li><li>[ Benefit 3 ]</li></ul></div>
+      </div>
+      <div class="wire-box"><h2>[ Application Information ]</h2><p>[ Instructions and official application link will appear here. ]</p><button class="outline-btn" id="applyInfo">[ Show application reminder ]</button><p id="applyMessage" class="muted" aria-live="polite"></p></div>
+    </section>
+
+    <section class="page" id="dashboard">
+      <p class="placeholder-label">[ PAGE 4 ]</p><h1>Student Dashboard</h1><p>[ Overview of your scholarship activity ]</p>
+      <div class="grid three">
+        <div class="wire-box"><p>[ SAVED SCHOLARSHIPS ]</p><h2 id="savedCount">0</h2></div>
+        <div class="wire-box"><p>[ APPLICATIONS ]</p><h2>0</h2></div>
+        <div class="wire-box"><p>[ UPCOMING DEADLINES ]</p><h2>0</h2></div>
+      </div>
+      <div class="wire-box"><h2>[ Saved Scholarships ]</h2><ul id="savedList"><li>[ No saved scholarships yet ]</li></ul></div>
+      <div class="wire-box"><h2>[ Application Progress ]</h2><p>[ Your application status will appear here. ]</p><div class="progress"><span></span></div></div>
+    </section>
+
+    <section class="page" id="guide">
+      <p class="placeholder-label">[ PAGE 5 ]</p><h1>Application Guide</h1><p>[ Simple steps to prepare your scholarship application ]</p>
+      <div class="wire-box steps">
+        <article><span>[ 1 ]</span><div><h3>[ Prepare your documents ]</h3><p>[ Gather school records and required documents. ]</p></div></article>
+        <article><span>[ 2 ]</span><div><h3>[ Check eligibility ]</h3><p>[ Review the scholarship requirements carefully. ]</p></div></article>
+        <article><span>[ 3 ]</span><div><h3>[ Submit your application ]</h3><p>[ Follow the provider's official instructions. ]</p></div></article>
+        <article><span>[ 4 ]</span><div><h3>[ Wait for the result ]</h3><p>[ Check your email and official announcements. ]</p></div></article>
+      </div>
+    </section>
+
+    <section class="page" id="about">
+      <p class="placeholder-label">[ PAGE 6 ]</p><h1>About EduGrant</h1>
+      <div class="grid two">
+        <div class="wire-box"><div class="image-placeholder small">[ LOGO ]</div><h2>[ Our Mission ]</h2><p>[ Explain how the website helps students find educational assistance. ]</p></div>
+        <div class="wire-box"><h2>[ Contact Us ]</h2><p>[ Email address ]</p><p>[ Contact information ]</p><p>[ Social media links ]</p></div>
+      </div>
+    </section>
+  </main>
+  <footer>[ EduGrant ] · [ Your Future, Your Opportunity ]</footer>
+  <script src="js/wireframe.js"></script>
+</body>
+</html>
